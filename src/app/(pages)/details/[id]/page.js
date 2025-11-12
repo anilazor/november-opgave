@@ -22,7 +22,7 @@ async function FetchProduct({ params }) {
 
       <div className="tag-wrapper my-5 flex flex-wrap gap-2">
         {product.tags?.map((tag) => (
-          <span key={tag} className="product-tag text-sm px-3 py-2 rounded-full text-stone-500 bg-stone-50">
+          <span key={tag} className="capitalize product-tag text-sm px-3 py-2 rounded-full text-stone-500 bg-stone-50">
             {tag}
           </span>
         ))}
