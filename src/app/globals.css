@@ -1,26 +1,94 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #fef1f1;
+  --foreground: #333333;
+  --custard: #ffc766;
+  --sun: #f2da82;
+  --salmon: #f38e88;
+  --ocean: #bcf6f5;
+  --sky: #a9c3db;
+  --salmon-beige: #ffcdc4;
+  --pink: #fda7b3;
+  --kiwi: #aacd87;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-custard: var(--custard);
+  --color-sun: var(--sun);
+  --color-salmon: var(--salmon);
+  --color-ocean: var(--ocean);
+  --color-sky: var(--sky);
+  --color-salmon-beige: var(--salmon-beige);
+  --color-pink: var(--pink);
+  --color-kiwi: var(--kiwi);
+  --font-manrope: "Manrope", sans-serif;
 }
 
 body {
-  background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-manrope);
+}
+
+h2 {
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+.product-card .list-img-wrapper,
+.inner-shadow {
+  position: relative;
+  box-shadow: inset 2px 4px 30px rgba(0, 0, 0, 0.168);
+}
+.selected {
+  border-color: var(--salmon);
+  color: white;
+  background-color: var(--salmon);
+}
+
+.product-card {
+  &:nth-child(1n) .list-img-wrapper {
+    background: var(--custard);
+  }
+
+  &:nth-child(2n) .list-img-wrapper {
+    background: var(--salmon);
+  }
+
+  &:nth-child(3n) .list-img-wrapper {
+    background: var(--ocean);
+  }
+
+  &:nth-child(4n) .list-img-wrapper {
+    background: var(--salmon-beige);
+  }
+
+  &:nth-child(5n) .list-img-wrapper {
+    background: var(--pink);
+  }
+
+  &:nth-child(6n) .list-img-wrapper {
+    background: var(--kiwi);
+  }
+}
+
+.product-tag {
+  &:nth-child(1) {
+    background: var(--sky);
+  }
+
+  &:nth-child(2) {
+    background: var(--pink);
+  }
+
+  &:nth-child(3) {
+    background: var(--kiwi);
+  }
+
+  &:nth-child(4) {
+    background: var(--sun);
+  }
 }
