@@ -15,7 +15,7 @@ async function FetchProduct({ params }) {
   const product = await response.json();
   return (
     <div className="">
-      <div className="inner-shadow h-110  bg-(--pink) rounded-4xl flex justify-center my-5">
+      <div className="inner-shadow h-110  bg-pink rounded-4xl flex justify-center my-5">
         <Image className="object-contain" loading="eager" alt={product.brand ? product.brand : "Product Image"} src={product.thumbnail} width={300} height={200} />
       </div>
       <h1 className="text-2xl font-semibold">{product.title}</h1>

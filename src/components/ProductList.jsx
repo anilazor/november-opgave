@@ -1,6 +1,7 @@
 import { Suspense } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import IconButton from "./IconButton";
 
 const ProductList = ({ category }) => {
   return (
@@ -20,6 +21,7 @@ const FetchProduct = async ({ category }) => {
     <Link className="product-card " href={`/details/${product.id}`} key={product.id}>
       <div className="rounded-4xl shadow-2xl shadow-stone-300 bg-background break-inside-avoid mb-4">
         <div className="list-img-wrapper rounded-4xl">
+          <IconButton />
           <Image loading="eager" alt={product.title} src={product.thumbnail} width={300} height={200}></Image>
         </div>
         <div className="p-4">
