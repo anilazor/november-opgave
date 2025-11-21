@@ -1,6 +1,7 @@
 "use client";
 import { useRouter, useSearchParams } from "next/navigation";
 
+
 const CategoryElement = ({ category }) => {
   const router = useRouter();
   const searchParams = useSearchParams();
